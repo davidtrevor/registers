@@ -1,4 +1,3 @@
-
 //TODO: check current time, input validation, file IO, .exe, email?, made a mistake/redo,
 
 
@@ -100,37 +99,40 @@ int main ()
   fifties = fifties * 50;
   hundreds = hundreds * 100;
   
-  changeTotal = pennies + nickels + dimes + quarters + halfDollars + dollarCoins + ones;
+  changeTotal = pennies + nickels + dimes + quarters + halfDollars + dollarCoins;
   
   if (changeTotal < 199)
   {
-      while ((ones > 0) && (changeTotal < 199)
+      while ((ones > 0) && (changeTotal < 199))
       {
           ones--;
           changeTotal++;
           count++;
       }
-      cout << "Place " << count << " dollar bills in the register envelope" << endl;
+      cout << endl << "Place " << count << " dollar bills in the register envelope" << endl;
           
-      while ((fives > 0) && (changeTotal < 199)
+      count = 0;
+      while ((fives > 0) && (changeTotal < 199))
       {
-          fives--;
+          fives -= 5;
           changeTotal += 5;
           count++;
       }
       cout << "Place " << count << " five dollar bills in the register envelope" << endl;
       
-      while ((tens > 0) && (changeTotal < 199)
+      count = 0;
+      while ((tens > 0) && (changeTotal < 199))
       {
-          tens--;
+          tens -= 10;
           changeTotal += 10;
           count++;
       }
       cout << "Place " << count << " ten dollar bills in the register envelope" << endl;
       
-      while ((twenties > 0) && (changeTotal < 199)
+      count = 0;
+      while ((twenties > 0) && (changeTotal < 199))
       {
-          twenties--;
+          twenties -= 20;
           changeTotal += 20;
           count++;
       }
